@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import DashboardWrapper from "./dashboardWrapper";
+import HeaderBlack from
+  "./HeaderBlack";
+
+import MainJack from "./MainJack";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,8 +33,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <DashboardWrapper> {children}</DashboardWrapper>
-        </body>
+        {/* <DashboardWrapper> {children}</DashboardWrapper> */}
+        <MainJack>
+          {children}
+        </MainJack>
+      </body>
     </html>
   );
 }
