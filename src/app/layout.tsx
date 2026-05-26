@@ -33,10 +33,11 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* <DashboardWrapper> {children}</DashboardWrapper> */}
-        <MainJack>
+        <DashboardWrapper> {children}</DashboardWrapper>
+        {/* <MainJack> 
           {children}
         </MainJack>
+        */}
       </body>
     </html>
   );
